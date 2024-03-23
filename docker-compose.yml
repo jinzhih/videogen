@@ -1,0 +1,10 @@
+services:
+  mysqldb:
+    container_name: envdb
+    platform: linux/x86_64
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
